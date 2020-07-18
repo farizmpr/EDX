@@ -19,25 +19,29 @@ sudo cp /usr/bin/pip3 /usr/bin/pip
 sudo apt install make
 
 # install docker
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo apt install docker-compose
+```
 
 # syntax for run docker without using sudo
-sudo usermod -aG docker ${USER}
+```sudo usermod -aG docker ${USER}
 su - ${USER}
 id -nG
+```
 
 # install git + clone
-sudo apt install git
+```sudo apt install git
 git clone https://github.com/edx/devstack
+```
 
 # to run every service
-cd devstack
+```cd devstack
 make requirements
 make dev.provision
 make dev.up
+```
